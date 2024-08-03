@@ -3,7 +3,20 @@
 one-hot不能准确表达不同词之间的相似度。
 对于任意向量$x,y$，他们的余弦相似度为：$$\frac{\mathbf{x}^\top \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|} \in [-1, 1]$$
 由于任意两个不同词的one-hot之间的余弦相似度都为0，所以one-hot不能编码词之间的相似性。
+# 分布式语义
+一个词的含义将由出现在它附近的词来提供。当一个单词`w`出现在一个文本中时，其上下文/context是一组单词出现在附近（固定大小的窗口内）。
+词向量（word vector/word embedding/word representation）：我们将为每个单词构建一个密集向量，使其与出现在类似语境中的单词向量相似。词向量属于分布式表示，而非局部表示。
+# Word2Vec
+Word2Vec是一个学习词向量的框架。
+idea:
+* 有大量的文本（"正文"）Corpus
+* 固定Vocab中的每个词都由一个向量表示
+* 查看文本中每个位置t的中心词c和上下文（"外部"）词o
+* 利用c和o的词向量的相似性计算出给定c的o的概率（反之亦然）
+* 不断调整词向量，使这一概率最大化
 
+对于每个位置t=1，...，T，给定中心词$w_j$，在固定大小$m$的窗口内预测上下文词：$$\textrm{Likelihood}=L(\theta)=\prod_{t=1}^T\prod_{-m\leq j \leq m}P(w_{t+j}|w_t;\theta)$$ $\theta$表示需要优化的所有变量。
+目标函数loss function是（平均）负对数似然：$$J(\theta)=-\frac{1}{T}=-\frac{1}{T}\sum_{t=1}^{T}\sum_{-m\leq j \leq m}log P(w_{t+j}|w_t,\theta)$$
 word2vec工具包含两个模型，即跳元模型（skip-gram）和连续词袋（CBOW）。
 # Skip-gram
 在给定中心词的情况下生成周围上下文词。
