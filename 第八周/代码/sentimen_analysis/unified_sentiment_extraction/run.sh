@@ -1,0 +1,1 @@
+python3 unified_sentiment_extraction/batch_predict.py --file_path "unified_sentiment_extraction/data/test_hotel.txt" --save_path "unified_sentiment_extraction/data/sentiment_analysis.json" --model "uie-senta-base" --schema "[{'评价维度': ['观点词', '情感倾向[正向,负向,未提及]']}]" --batch_size 4 --max_seq_len 512

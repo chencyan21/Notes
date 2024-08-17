@@ -1,0 +1,1 @@
+python unified_sentiment_extraction/visual_analysis.py --file_path "unified_sentiment_extraction/data/sentiment_analysis.json" --save_dir "unified_sentiment_extraction/outputs/images" --task_type "ext"

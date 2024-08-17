@@ -1,0 +1,4 @@
+{"text": "蛋糕味道不错，很好吃，店家很耐心，服务也很好，很棒", "ap_list": [{"aspect": "蛋糕味道", "opinions": ["不错", "好吃"], "sentiment_polarity": "正向"}, {"aspect": "店家", "opinions": ["耐心"], "sentiment_polarity": "正向"}, {"aspect": "服务", "opinions": ["好", "棒"], "sentiment_polarity": "正向"}]}
+{"text": "酒店干净整洁，性价比很高", "ap_list": [{"aspect": "酒店", "opinions": ["干净"], "sentiment_polarity": "正向"}, {"aspect": "性价比", "opinions": ["高"], "sentiment_polarity": "正向"}]}
+{"text": "酒店环境不错，非常安静，性价比还可以", "ap_list": [{"aspect": "环境", "opinions": ["不错", "安静"], "sentiment_polarity": "正向"}, {"aspect": "性价比", "opinions": ["还可以"], "sentiment_polarity": "正向"}]}
+{"text": "房间很大，环境不错", "ap_list": [{"aspect": "房间", "opinions": ["大"], "sentiment_polarity": "正向"}, {"aspect": "环境", "opinions": ["不错"], "sentiment_polarity": "正向"}]}
